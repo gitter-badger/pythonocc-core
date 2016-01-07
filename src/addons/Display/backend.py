@@ -1,6 +1,5 @@
 import logging
 import sys
-import warnings
 
 global QtCore, QtGui, QtWidgets, QtOpenGL
 
@@ -137,9 +136,6 @@ def get_backend(backend_str=None):
         try:
             import wx
 
-            warnings.warn("wx for pythonocc development is in maintanence mode"
-                          "use Qt ( PqyQt5, PyQt4 or PySide ) for new projects",
-                          DeprecationWarning)
             HAVE_BACKEND = True
             HAVE_WX = True
             BACKEND_MODULE = 'wx'
